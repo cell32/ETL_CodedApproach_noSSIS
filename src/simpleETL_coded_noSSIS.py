@@ -8,7 +8,8 @@ from tabulate import tabulate
 def etl_noSSIS():
     load_dotenv() # load environment variables
 
-    df = pd.read_csv(r"C:\Users\SkyNet_1\Documents\product-sales.csv")
+    # df = pd.read_csv(r"C:\Users\SkyNet_1\Documents\product-sales.csv")
+    df = pd.read_csv(os.path.join("data", "product-sales.csv"))
     df.info()
 
     # # Display the DataFrame data format in table format using tabulate
@@ -37,7 +38,7 @@ def etl_noSSIS():
         )
 
         cursor = connection.cursor()
-        cursor.execute(f"CREATE DATABSE IF NOT EXISTS {db}")
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db}")
         connection.commit()
         print(f"Database {db} created successfully")
 

@@ -1,0 +1,1 @@
+This is a simple python ETL using VSCode and MySQL. Basically created for fun in comparing the ETL "Coded Approach" vs the ETL "noCode Approach" using SSIS tool from Microsoft. This repository is also avaiable
